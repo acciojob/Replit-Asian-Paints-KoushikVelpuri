@@ -1,9 +1,9 @@
 //your JS code here. If required.
 let container = document.getElementById('grid-container')
 for(let i=0; i<9; i++){
-	let box = document.creat'eElement('div')
+	let box = document.createElement('div')
 	box.id = i
-	box.className = 'gird-item'
+	box.className = 'grid-item'
 	box.innerHTML = i
 	container.appendChild(box)
 }
@@ -22,7 +22,7 @@ function changeColor(){
 		alert('Please enter a color')
 		return
 	}
-	document.getElementById(blockId).style.backgroundColor = color
+	document.getElementById(blockId).style.backgroundColor = colorId
 }
 function reset(){
 	let boxes = document.getElementByClassName('grid-item')
