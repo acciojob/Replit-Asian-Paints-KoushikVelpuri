@@ -1,1 +1,32 @@
 //your JS code here. If required.
+let container = document.getElementById('grid-container')
+for(let i=0; i<9; i++){
+	let box = document.creat'eElement('div')
+	box.id = i
+	box.className = 'gird-item'
+	box.innerHTML = i
+	container.appendChild(box)
+}
+function changeColor(){
+	let blockId = document.getElementById('block_id').value
+	let colorId = document.getElementById('color_id').value
+	let boxes = document.getElementByClassName('grid-item')
+	for(let i=0; i<boxes.length; i++){
+		boxes[i].style.backgroundColor = 'transparent'
+	}
+	if(blockId<1 || blockId>9 || blockId=''){
+		alert('Enter a valid Block ID b/w 1 and 9')
+		return 
+	}
+	if(colorId == ''){
+		alert('Please enter a color')
+		return
+	}
+	document.getElementById(blockId).style.backgroundColor = color
+}
+function reset(){
+	let boxes = document.getElementByClassName('grid-item')
+	for(let i=0; i<boxes.length; i++){
+		boxes[i].style.backgroundColor = 'transparent'
+	}
+}
