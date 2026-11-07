@@ -9,12 +9,12 @@ for(let i=0; i<9; i++){
 }
 function changeColor(){
 	let blockId = document.getElementById('block_id').value
-	let colorId = document.getElementById('color_id').value
-	let boxes = document.getElementByClassName('grid-item')
+	let colorId = document.getElementById('colour_id').value
+	let boxes = document.getElementsByClassName('grid-item')
 	for(let i=0; i<boxes.length; i++){
 		boxes[i].style.backgroundColor = 'transparent'
 	}
-	if(blockId<1 || blockId>9 || blockId=''){
+	if(blockId<1 || blockId>9 || blockId==''){
 		alert('Enter a valid Block ID b/w 1 and 9')
 		return 
 	}
@@ -25,7 +25,7 @@ function changeColor(){
 	document.getElementById(blockId).style.backgroundColor = colorId
 }
 function reset(){
-	let boxes = document.getElementByClassName('grid-item')
+	let boxes = document.getElementsByClassName('grid-item')
 	for(let i=0; i<boxes.length; i++){
 		boxes[i].style.backgroundColor = 'transparent'
 	}
